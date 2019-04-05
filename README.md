@@ -1,4 +1,4 @@
-# kayakdemo
+# Rick and Morty Visualizer
 Intern test, Display information about Rick and Morty Characters and Episodes, using [Rick and Morty API](https://rickandmortyapi.com/).
 ___
 ## Getting Started
