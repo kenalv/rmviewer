@@ -1,0 +1,66 @@
+<div class="row no-gutters overflow-auto" >
+  <div class="card mb-5 text-center">
+    <img src="{{character.img}}" class="card-img-top" alt="{{character.name}}">
+      <div class="card-body">
+      <h5 class="card-title">{{character.name}}</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="c-status">Status:</label>
+        </div>
+        <div class="col-md-6">
+          <p id="c-status" class="">{{character.status}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="c-species">Species:</label>
+        </div>
+        <div class="col-md-6">
+          <p id="c-species" class="">{{character.species}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="c-gender">Gender:</label>
+        </div>
+        <div class="col-md-6">
+          <p id="c-gender" class="">{{character.gender}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="c-type">Type:</label>
+        </div>
+        <div class="col-md-6">
+          <p id="c-type" class="">{{character.type}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="c-origin">Origin:</label>
+        </div>
+        <div class="col-md-6">
+          <p id="c-origin" class="">{{character.origin}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="c-location">Location:</label>
+        </div>
+        <div class="col-md-6">
+          <p id="c-location" class="">{{character.location}}</p>
+        </div>
+      </div>
+     </div>
+  </div>
+  <div class="card mb-5 text-center">
+    <div class="card-header">
+      Episodes
+    </div>
+    <div style="max-height: 680px; overflow-y: scroll">
+      <ul class="list-group list-group-flush ">
+        <li *ngFor="let episode of character.episodes" class="list-group-item"><a routerLink="/episode/{{episode.id}}" >{{episode.url}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

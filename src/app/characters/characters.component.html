@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card-columns " style="overflow-x: scroll; max-height: 820px ">
+    <router-outlet></router-outlet>
+  </div>
+  <nav *ngIf="pagArray" aria-label="Page navigation example justify-content-center">
+    <ul class="pagination">
+      <!--<li class="page-item">-->
+        <!--<a class="page-link" aria-label="Previous">-->
+          <!--<span aria-hidden="true">&laquo;</span>-->
+        <!--</a>-->
+      <!--</li>-->
+      <li *ngFor="let pageNumber of pagArray" class="page-item"><a class="page-link" routerLink="{{pageNumber}}">{{pageNumber}}</a></li>
+      <!--<li class="page-item">-->
+        <!--<a class="page-link"  aria-label="Next">-->
+          <!--<span aria-hidden="true">&raquo;</span>-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+  </nav>
+</div>
+

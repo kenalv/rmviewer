@@ -1,0 +1,43 @@
+
+<div class="row no-gutters" >
+  <div class="col-md-4 card mb-5 text-center">
+    <div class="card-body">
+      <h3 class="card-title">Episode:</h3>
+      <h5 class="card-subtitle">{{episode.name}}</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="c-status">Episode:</label>
+        </div>
+        <div class="col-md-6">
+          <p id="c-status" class="">{{episode.episode}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="c-species">Air Date:</label>
+        </div>
+        <div class="col-md-6">
+          <p id="c-species" class="">{{episode.air_date}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-5 text-center">
+    <div class="card-header">
+      Episode Characters
+    </div>
+    <div style="max-height: 300px; overflow-y: scroll">
+      <div class="card-columns">
+        <div *ngFor="let character of episodeCharacters"  class="card text-white bg-secondary text-center" style="max-width: 13rem;">
+          <div class="card-body ">
+            <a routerLink="/character/{{character.id}}" ><img class="card-img"
+              src="{{character.img}}"  alt="{{character.name}}"></a>
+            <div class="card-footer">
+              <p class="card-text">{{character.name}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

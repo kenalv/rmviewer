@@ -1,0 +1,8 @@
+<div *ngFor="let character of characters" class="card text-center w-75 h-25" >
+  <img src="{{character.img}}" id="{{character.id}}" class="card-img-top" alt="{{character.name}}">
+  <div class="card-body ">
+    <h5 class="card-title">{{character.name}}</h5>
+    <a href="#" routerLink="/character/{{character.id}}" class="btn btn-link">See more...</a>
+   </div>
+</div>
+
